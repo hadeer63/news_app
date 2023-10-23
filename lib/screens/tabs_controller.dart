@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/SourcesResponse.dart';
+import 'package:news_app/screens/news_card_item.dart';
 import 'package:news_app/screens/source_item.dart';
 import 'package:news_app/shared/network/remote/manager.dart';
 
@@ -51,7 +52,7 @@ State<TabControllerWidget> {
               var newsList=snapshot.data?.articles??[];
               return Expanded(
                 child: ListView.builder(itemBuilder:(context, index) {
-                  return Text(newsList[index].title??"") ;
+                  return NewsCardItem(newsList[index]) ;
 
                 },
                   itemCount:  newsList.length,
