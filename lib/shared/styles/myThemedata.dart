@@ -6,7 +6,7 @@ class MyThemeData {
 
   static ThemeData lightTheme = ThemeData(
       scaffoldBackgroundColor: mint,
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      bottomNavigationBarTheme:const BottomNavigationBarThemeData(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: primaryColor,
           unselectedItemColor: Colors.grey,
@@ -14,8 +14,8 @@ class MyThemeData {
           showSelectedLabels: false,
           showUnselectedLabels: false));
   static ThemeData darkTheme =ThemeData(
-    scaffoldBackgroundColor: Color(0xFF141922),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    scaffoldBackgroundColor: const Color(0xFF141922),
+      bottomNavigationBarTheme:const BottomNavigationBarThemeData(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: primaryColor,
           unselectedItemColor: Colors.grey,
