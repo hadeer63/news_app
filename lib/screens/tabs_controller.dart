@@ -30,10 +30,8 @@ State<TabControllerWidget> {
                 onTap: (value){
                 selectedIndex=value;
                 setState(() {
-
                 });
                 },
-
                 indicatorColor: Colors.transparent,
                 tabs:widget.sources.map((source) => Tab(
                     child: SourceItem(source, widget.sources.indexOf(source)==selectedIndex))).toList()
@@ -53,7 +51,6 @@ State<TabControllerWidget> {
               return Expanded(
                 child: ListView.builder(itemBuilder:(context, index) {
                   return NewsCardItem(newsList[index]) ;
-
                 },
                   itemCount:  newsList.length,
                 ),
