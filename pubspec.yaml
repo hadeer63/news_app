@@ -38,7 +38,14 @@ dependencies:
   google_fonts: ^6.1.0
   http: ^1.1.0
   cached_network_image: ^3.3.0
+  flutter_native_splash: ^2.3.4
+  provider: ^6.0.5
 
+flutter_native_splash:
+  background_image: assets/images/splash.png
+
+  android_12:
+    image: assets/images/splash.png
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -60,6 +67,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  generate: true
 
   # To add assets to your application, add an assets section, like this:
   assets:

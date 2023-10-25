@@ -3,6 +3,7 @@ import 'package:news_app/models/category_model.dart';
 import 'package:news_app/screens/categories_tab.dart';
 import 'package:news_app/screens/drawer.dart';
 import 'package:news_app/screens/news_tab.dart';
+import 'package:news_app/screens/settings_tab.dart';
 import 'package:news_app/screens/tabs_controller.dart';
 import 'package:news_app/shared/network/remote/manager.dart';
 
@@ -53,7 +54,9 @@ class _HomeLayoutState extends State<HomeLayout> {
   onDrawerClicked(id) {
     if (id == DrawerTab.CAT_ID) {
       categoryModel = null;
-    } else if (id == DrawerTab.SET_ID) {}
+    } else if (id == DrawerTab.SET_ID) {
+      Navigator.pushNamed(context, SettingsTab.routeName);
+    }
     setState(() {
       Navigator.pop(context);
     });
