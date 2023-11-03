@@ -7,5 +7,4 @@ class MyProvider extends ChangeNotifier {
     languageCode = langCode;
     notifyListeners();
   }
-
 }

@@ -3,6 +3,7 @@ import 'package:news_app/models/category_model.dart';
 import 'package:news_app/screens/home/categories_tab.dart';
 import 'package:news_app/screens/home/drawer.dart';
 import 'package:news_app/screens/home/news_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SettingsView extends StatefulWidget {
   static const String routeName = "Settings";
@@ -33,7 +34,7 @@ class _SettingsViewState extends State<SettingsView> {
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(18),
                     bottomRight: Radius.circular(18))),
-            title: Text("News"),
+            title: Text(AppLocalizations.of(context)!.news),
           ),
           body: categoryModel == null
               ? CategoriesTab(catories, onCategoryClicked)
@@ -51,7 +52,9 @@ class _SettingsViewState extends State<SettingsView> {
   onDrawerClicked(id) {
     if (id == DrawerTab.CAT_ID) {
       categoryModel = null;
-    } else if (id == DrawerTab.SET_ID) {}
+    } else if (id == DrawerTab.SET_ID) {
+      Navigator.push(context, SettingsView.routeName as Route<Object?>);
+    }
     setState(() {
       Navigator.pop(context);
     });

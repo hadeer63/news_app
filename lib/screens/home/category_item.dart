@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/category_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CategoryItem extends StatelessWidget {
   CategoryModel categoryModel;

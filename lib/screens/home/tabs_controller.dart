@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/screens/home/cubit/cubit.dart';
 import 'package:news_app/screens/home/source_item.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'news_card_item.dart';
 
 class TabControllerWidget extends StatelessWidget {

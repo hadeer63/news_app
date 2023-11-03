@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/category_model.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'category_item.dart';
 
 class CategoriesTab extends StatelessWidget {
@@ -18,7 +18,7 @@ class CategoriesTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Pick your category of interest",
+            AppLocalizations.of(context)!.pickYourCategoryOfInterest,
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           SizedBox(

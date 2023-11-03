@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/SourcesResponse.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SourceItem extends StatelessWidget {
   Sources sources;

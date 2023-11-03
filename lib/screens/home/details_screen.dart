@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/newsResponse.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DetailsScreen extends StatelessWidget {
   static const String routeName = 'details';
@@ -12,12 +13,6 @@ class DetailsScreen extends StatelessWidget {
     final article = ModalRoute.of(context)!.settings.arguments as Articles;
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-          const SizedBox(
-            width: 20,
-          )
-        ],
         centerTitle: true,
         backgroundColor: Colors.green,
         shape: const OutlineInputBorder(
@@ -25,7 +20,7 @@ class DetailsScreen extends StatelessWidget {
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(18),
                 bottomRight: Radius.circular(18))),
-        title: const Text("News Title"),
+        title: Text(AppLocalizations.of(context)!.newsTitle),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -45,7 +40,7 @@ class DetailsScreen extends StatelessWidget {
                     article.source?.name ?? "",
                     style: const TextStyle(fontSize: 12, color: Colors.grey),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
@@ -55,7 +50,7 @@ class DetailsScreen extends StatelessWidget {
                         color: Colors.black,
                         fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
@@ -93,7 +88,7 @@ class DetailsScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text(
-                            "View Full Article",
+                            AppLocalizations.of(context)!.viewFullArticle,
                             style: TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.w500),
                           ),

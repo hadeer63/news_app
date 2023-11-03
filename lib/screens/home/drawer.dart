@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DrawerTab extends StatelessWidget {
   Function onClick;
@@ -22,12 +23,13 @@ class DrawerTab extends StatelessWidget {
               width: double.infinity,
               color: Colors.green,
               child: Center(
-                child: Text("News App!",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold
-                ),),
+                child: Text(
+                  AppLocalizations.of(context)!.newsApp,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             Row(
@@ -43,11 +45,9 @@ class DrawerTab extends StatelessWidget {
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
-                    child: Text("Categories",
+                    child: Text(AppLocalizations.of(context)!.category,
                         style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
-                        )),
+                            fontSize: 20, fontWeight: FontWeight.bold)),
                   ),
                 ),
               ],
@@ -66,11 +66,10 @@ class DrawerTab extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
                     child: Text(
-                      "Settings",
+                      AppLocalizations.of(context)!.settings,
                       style:
-                          TextStyle(fontSize: 20,
-                      fontWeight: FontWeight.bold
-                    ),),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ],

@@ -1,9 +1,12 @@
+import 'dart:convert';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:news_app/models/SourcesResponse.dart';
 import 'package:news_app/models/newsResponse.dart';
 import 'package:news_app/repo/home_repo.dart';
 import 'package:news_app/screens/home/cubit/states.dart';
+import 'package:news_app/shared/components/constants.dart';
 
 class HomeCubit extends Cubit<HomeStates> {
   HomeRepo repo;
@@ -42,6 +45,18 @@ class HomeCubit extends Cubit<HomeStates> {
       emit(HomeGetNewsDataSuccessState());
     } catch (e) {
       emit(HomeGetNewsDataErrorState());
+    }
+  }
+
+  static Future<NewsResponse?> searchNews(String query) async {
+    try {
+      Uri url = Uri.https(BASE_URL, API_KEY, {"apiKey": API_KEY, "q": query});
+      http.Response response = await http.get(url);
+      var jsonData = jsonDecode(response.body);
+      NewsResponse newsResponse = NewsResponse.fromJson(jsonData);
+      return newsResponse;
+    } catch (e) {
+      throw Exception();
     }
   }
 }

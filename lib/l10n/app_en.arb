@@ -1,15 +1,22 @@
-//{
-//  "news": "News",
-//  "category": "Category",
-//  "settings": "Settings",
-//  "newsApp": "News App",
-//  "sports": "Sports",
-//  "politics": "Politics",
-//  "health": "Health",
-//  "english": "English",
-//  "arabic": "Arabic",
-//  "language": "Language",
-//  "business": "Business",
-//  "environment": "Environment",
-//  "science": "Science"
-//}
+{
+  "news": "News",
+  "category": "Categories",
+  "settings": "Settings",
+  "newsApp": "News App!",
+  "sports": "Sports",
+  "general": "General",
+  "health": "Health",
+  "english": "English",
+  "arabic": "Arabic",
+  "language": "Language",
+  "business": "Business",
+  "entertainment": "Entertainment",
+  "science": "Science",
+  "suggestions": "Suggestions",
+  "somethingWentWrong": "Something went Wrong",
+  "tryAgain": "Try Again",
+  "ok": "Ok",
+  "pickYourCategoryOfInterest": "Pick your category of interest",
+  "newsTitle": "News Title",
+  "viewFullArticle": "View Full Article"
+}

@@ -1,15 +1,22 @@
-//{
-//  "news": " الاخبار",
-//  "category": "الفئات",
-//  "settings": "الاعدادات",
-//  "newsApp": "برنامج الاخبار",
-//  "sports": "الرياضه",
-//  "politics": "السياسه",
-//  "health": "الصحه",
-//  "english": "انجليزي",
-//  "arabic": "عربي",
-//  "language": "اللغه",
-//  "business": "الاعمال",
-//  "environment": "البيئه",
-//  "science": "علوم"
-//}
+{
+  "news": " الاخبار",
+  "category": "الفئات",
+  "settings": "الاعدادات",
+  "newsApp": "برنامج الاخبار!",
+  "sports": "الرياضه",
+  "politics": "السياسه",
+  "health": "الصحه",
+  "english": "انجليزي",
+  "arabic": "عربي",
+  "language": "اللغه",
+  "business": "الاعمال",
+  "entertainment": "الترفيه",
+  "science": "علوم",
+  "suggestions": "الاقتراحات",
+  "somethingWentWrong": "حدث شئ خطأ",
+  "tryAgain": "حاول مره اخري",
+  "ok": "حسنا",
+  "pickYourCategoryOfInterest": "اختر فئة اهتمامك",
+  "newsTitle": "عنوان الاخبار",
+  "viewFullArticle": "شاهد المقاله كامله"
+}

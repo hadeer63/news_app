@@ -5,6 +5,7 @@ import 'package:news_app/repo/remote_ds.dart';
 import 'package:news_app/screens/home/cubit/cubit.dart';
 import 'package:news_app/screens/home/cubit/states.dart';
 import 'package:news_app/screens/home/tabs_controller.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class NewsTab extends StatefulWidget {
   String catId;
