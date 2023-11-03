@@ -9,9 +9,9 @@ import 'package:news_app/screens/home/cubit/states.dart';
 import 'package:news_app/shared/components/constants.dart';
 
 class HomeCubit extends Cubit<HomeStates> {
-  HomeRepo repo;
+  HomeRepo homeRepo;
 
-  HomeCubit(this.repo) : super(HomeInitState());
+  HomeCubit(this.homeRepo) : super(HomeInitState());
 
   static HomeCubit get(context) => BlocProvider.of(context);
 
@@ -27,7 +27,7 @@ class HomeCubit extends Cubit<HomeStates> {
   Future<void> getSources(String catId) async {
     emit(HomeGetSourcesLoadingState());
     try {
-      SourcesResponse sourcesResponse = await repo.getSources(catId);
+      SourcesResponse sourcesResponse = await homeRepo.getSources(catId);
       sourcesList = sourcesResponse.sources ?? [];
       emit(HomeGetSourcesSuccessState());
     } catch (e) {
@@ -39,9 +39,9 @@ class HomeCubit extends Cubit<HomeStates> {
   Future<void> getNewsData() async {
     emit(HomeGetNewsDataLoadingState());
     try {
-      articles = (await repo.getNewsData(sourcesList[selectedIndex].id ?? ""))
-              .articles ??
-          [];
+      NewsResponse newsResponse =
+          await homeRepo.getNewsData(sourcesList[selectedIndex].id ?? "");
+      articles = newsResponse.articles ?? [];
       emit(HomeGetNewsDataSuccessState());
     } catch (e) {
       emit(HomeGetNewsDataErrorState());

@@ -4,9 +4,9 @@ import 'package:http/http.dart' as http;
 import 'package:news_app/models/SourcesResponse.dart';
 import 'package:news_app/models/newsResponse.dart';
 import 'package:news_app/repo/home_repo.dart';
-import '../../shared/components/constants.dart';
+import '../../../shared/components/constants.dart';
 
-class RemoteDataSource implements HomeRepo {
+class RemoteDS implements HomeRepo {
   @override
   Future<NewsResponse> getNewsData(String sourceId) async {
     try {
