@@ -19,7 +19,7 @@ class HomeLayout extends StatefulWidget {
 class _HomeLayoutState extends State<HomeLayout> {
   @override
   Widget build(BuildContext context) {
-    List<CategoryModel> catories = CategoryModel.getCategories();
+    List<CategoryModel> catories = CategoryModel.getCategories(context);
     return Container(
       decoration: const BoxDecoration(
           color: Colors.white,

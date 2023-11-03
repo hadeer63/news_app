@@ -24,7 +24,7 @@ class LanguageBottomSheet extends StatelessWidget {
                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontSize: 20,
                         color: provider.languageCode == "en"
-                            ? Colors.blue
+                            ? Colors.green
                             : Colors.grey[700]),
                   ),
                   Spacer(),
@@ -32,8 +32,8 @@ class LanguageBottomSheet extends StatelessWidget {
                       ? Icon(
                     Icons.done,
                     color: provider.languageCode == "en"
-                        ? Colors.blue
-                        : Colors.grey[700],
+                              ? Colors.green
+                              : Colors.grey[700],
                     size: 30,
                   )
                       : SizedBox.shrink()
@@ -54,7 +54,7 @@ class LanguageBottomSheet extends StatelessWidget {
                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontSize: 20,
                         color: provider.languageCode == "ar"
-                            ? Colors.blue
+                            ? Colors.green
                             : Colors.grey[700]),
                   ),
                   Spacer(),
@@ -64,8 +64,8 @@ class LanguageBottomSheet extends StatelessWidget {
                     Icons.done,
                     size: 30,
                     color: provider.languageCode == "ar"
-                        ? Colors.blue
-                        : Colors.grey[700],
+                              ? Colors.green
+                              : Colors.grey[700],
                   )
                 ],
               ),

@@ -17,7 +17,7 @@ class SettingsView extends StatefulWidget {
 class _SettingsViewState extends State<SettingsView> {
   @override
   Widget build(BuildContext context) {
-    List<CategoryModel> catories = CategoryModel.getCategories();
+    List<CategoryModel> catories = CategoryModel.getCategories(context);
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
